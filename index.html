@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tirth Popat – chip design and semiconductor devices</title>
+  <meta name="description" content="Tirth Popat is an Electronics Engineering (VLSI Design and Technology) student at VIT Chennai. Projects in chip design, circuits, signal processing and quantum physics, newest first.">
+  <meta property="og:title" content="Tirth Popat">
+  <meta property="og:description" content="Chip design, circuits and semiconductor research. Projects from every semester, newest first.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0F5C4A">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F5C4A'/%3E%3Cpath d='M4 20h6l3-10 4 16 3-10 2 4h6' fill='none' stroke='%23E7C873' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
+
+  <header class="bar">
+    <a class="mark" href="#top" aria-label="Tirth Popat, home">Tirth Popat</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Switch between light and dark theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.5 0-1-.1-1.4A6 6 0 0 1 12.4 3.1 9 9 0 0 0 12 3z" fill="currentColor"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Tirth Popat</h1>
+      <p class="statement">I design and study chips and the devices underneath them. Right now that means neuromorphic hardware, a motor-control ASIC, and machine learning for wafer inspection.</p>
+      <p class="where">Electronics Engineering, VLSI Design and Technology, at VIT Chennai.</p>
+      <div class="actions">
+        <a class="btn solid" href="#projects">See the projects</a>
+        <a class="btn" href="#intro">Watch the intro</a>
+        <a class="btn" href="Tirth_Popat_Resume.pdf" download>Download resume</a>
+      </div>
+
+      <figure class="scope">
+        <canvas id="neuron" aria-label="Animated plot of a leaky integrate-and-fire neuron's membrane voltage" role="img"></canvas>
+        <figcaption>A leaky integrate-and-fire neuron, the building block of my Neurochip project. Move across the plot to change the input current.</figcaption>
+      </figure>
+    </section>
+
+    <section id="intro" class="block">
+      <div class="block-head">
+        <h2>Two-minute introduction</h2>
+        <p>Who I am and what I want to work on.</p>
+      </div>
+      <!-- Replace VIDEO_ID with the ID from your YouTube link (the part after v= or youtu.be/) -->
+      <div class="video" data-video-id="VIDEO_ID"></div>
+    </section>
+
+    <section id="about" class="block">
+      <div class="block-head">
+        <h2>About</h2>
+      </div>
+      <div class="about">
+        <div class="prose">
+          <p>I'm a third-year B.Tech student from Ahmedabad, studying Electronics Engineering with a specialisation in VLSI Design and Technology at VIT Chennai.</p>
+          <p>What pulls me in is the layer under the chip: how semiconductor devices behave, how new materials change that, and how those choices show up as timing, power and area once a design is routed. I like checking a result against a second source, and I write down what a result does not show as carefully as what it does.</p>
+          <p>I'm looking for research and internship opportunities in semiconductor devices, VLSI and device modelling.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Studying</dt><dd>VLSI Design and Technology, VIT Chennai, CGPA 8.74</dd></div>
+          <div><dt>Interested in</dt><dd>Semiconductor devices, III-V and wide-bandgap materials, quantum devices, ASIC design</dd></div>
+          <div><dt>Research</dt><dd>GNSS security with Sarangha; non-Hermitian quantum mechanics with Prof. Velmathi Guruviah</dd></div>
+          <div><dt>Languages</dt><dd>English and Hindi (fluent), Gujarati (native), basic German and French</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="projects" class="block">
+      <div class="block-head">
+        <h2>Projects</h2>
+        <p>Everything I've built, newest semester first.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter projects by topic">
+        <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="chip" aria-pressed="false">Chip design</button>
+        <button type="button" class="chip" data-filter="circuits" aria-pressed="false">Circuits and hardware</button>
+        <button type="button" class="chip" data-filter="ml" aria-pressed="false">Signals and ML</button>
+        <button type="button" class="chip" data-filter="physics" aria-pressed="false">Physics and research</button>
+      </div>
+      <p id="empty" class="empty" hidden>No projects match this filter. Choose another topic or select All.</p>
+
+      <!-- ============ SEMESTER 5 ============ -->
+      <section class="sem" id="sem5" aria-labelledby="sem5-h">
+        <div class="sem-label">
+          <h3 id="sem5-h">Semester 5</h3>
+          <p>Autumn 2026</p>
+        </div>
+        <div class="works">
+
+          <article class="work" id="neurochip" data-tags="chip">
+            <h4>Neurochip: an 8-core RRAM neuromorphic processor</h4>
+            <p class="byline">VLSI course project, with Atharva Chougule</p>
+            <p class="what">Built in eight phases. It starts with a transistor-level neuron in Cadence Virtuoso, moves to a digital leaky integrate-and-fire core with on-chip STDP learning, and ends as a multi-core tile joined by a network-on-chip. Swapping SRAM weight memory for RRAM crossbar macros cut the reported area by about 81%.</p>
+            <dl class="figs">
+              <div><dt>Neurons</dt><dd>256</dd></div>
+              <div><dt>RRAM synapses</dt><dd>16,384</dd></div>
+              <div><dt>Target clock</dt><dd>66.7 MHz</dd></div>
+              <div><dt>Process</dt><dd>Sky130HD, 130 nm</dd></div>
+            </dl>
+            <details>
+              <summary>What was measured, and what is still open</summary>
+              <div class="more">
+                <p>A forward pass fell from about 530 cycles to 96 once a single-cycle vector-matrix multiply replaced the 16-chunk weight fetch. The 8-core design went through Yosys, OpenROAD and KLayout to a complete GDSII, with a round-robin network-on-chip carrying 9-bit AER spike packets.</p>
+                <p>The analog groundwork is in the same report: a neuron schematic and symbol, a two-neuron chain with SR latches, a hysteresis loop, and a resistor sweep. The schematic fired eight spikes per input pulse and the symbol six, which traced back to the input RC network.</p>
+                <p><strong>Open points.</strong> Worst slack is −0.02 ns at 15 ns, and 41 layout violations remain (37 DRC, 4 antenna). RRAM is a behavioural model, so the 872 mW power figure leaves out RRAM power. A 16-core version passed RTL simulation but ran out of memory in place and route.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="work" id="pwm" data-tags="chip">
+            <h4>PWM motor controller with live throttle feedback</h4>
+            <p class="byline">ASIC design lab, with Atharva Chougule</p>
+            <p class="what">A closed-loop motor controller taken from RTL to GDSII with the Cadence flow: Genus for synthesis, Innovus for place and route, Tempus for timing sign-off, on a 45 nm library at 100 MHz. A fixed-point PI loop holds a speed setpoint from tachometer feedback, and a protection stage forces the outputs low on over-current or lost feedback.</p>
+            <dl class="figs">
+              <div><dt>Setup slack</dt><dd>+34 ps</dd></div>
+              <div><dt>Cells</dt><dd>4,449</dd></div>
+              <div><dt>Post-route power</dt><dd>2.083 mW</dd></div>
+              <div><dt>DRC violations</dt><dd>0</dd></div>
+            </dl>
+            <details>
+              <summary>Design and verification details</summary>
+              <div class="more">
+                <p>The design has a 16-register APB interface, a 16-bit PWM core with double-buffered duty updates, programmable dead-time between complementary outputs, a Q8.8 PI controller, soft-start, slew-rate limiting and duty clamps. The tachometer input passes a two-flop synchroniser and a four-sample glitch filter. Assertions check dead-time and fault-response latency. I also integrated it with a PID engine to test a sensor-to-motor chain.</p>
+                <p><strong>Open points.</strong> Power is an estimate at default switching activity. 443 timing endpoints still need constraints. My Python golden model reached 80.35 against a target of 500 in its run, so the PI gains need tuning before the RTL and the model can be compared.</p>
+              </div>
+            </details>
+            <p class="links"><a href="https://github.com/TirthPopat/PWM-Motor-Controller-PS03" target="_blank" rel="noopener">Source on GitHub</a></p>
+          </article>
+
+          <article class="work" id="sequrx" data-tags="circuits">
+            <h4>SequrX: QR-based visitor access for residential societies</h4>
+            <p class="byline">Course project, with Atharva Chougule and Dhyan Patel</p>
+            <p class="what">Residents issue time-bound QR passes, guards scan them at entry and exit from a phone browser, and each valid scan becomes a gate command that a Raspberry Pi turns into servo movement on a miniature gate. Residents get an in-app notification when a visitor enters.</p>
+            <dl class="figs">
+              <div><dt>Web app</dt><dd>Next.js on Vercel</dd></div>
+              <div><dt>Backend</dt><dd>Firebase, Firestore</dd></div>
+              <div><dt>Gate</dt><dd>Raspberry Pi, servo</dd></div>
+            </dl>
+            <details>
+              <summary>How it fits together</summary>
+              <div class="more">
+                <p>The web app never talks to the hardware directly. It writes a command to Firestore and the Pi picks it up, so the database is the only link between software and gate and every command stays on record. Unknown QR codes are rejected: a payment QR scanned at the gate produced an ACCESS_DENIED record and the gate stayed closed.</p>
+                <p><strong>Status.</strong> The resident and guard portals, entry and exit logging with durations, notifications and the gate prototype work. The administrator portal, WhatsApp pass delivery and analytics are still in progress. The QR code currently carries a plain pass ID, so signed payloads are the next security step.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="work" id="drift-sense" data-tags="ml">
+            <h4>Drift-Sense: recovering from navigation errors in wafer inspection</h4>
+            <p class="byline">Independent project</p>
+            <p class="what">A Siamese ResNet-18 combined with rotated ZNCC template matching to find wafer features in SEM images that have drifted, rotated, scaled or gone noisy. It is trained on synthetic FinFET SEM images, so it needs no proprietary fab data.</p>
+            <dl class="figs">
+              <div><dt>Accuracy, no noise</dt><dd>100%</dd></div>
+              <div><dt>Low noise</dt><dd>96.7%</dd></div>
+              <div><dt>High noise</dt><dd>90.0%</dd></div>
+              <div><dt>Mean error</dt><dd>0.4 to 4.5 px</dd></div>
+            </dl>
+            <details>
+              <summary>Test conditions</summary>
+              <div class="more">
+                <p>Accuracy counts a match within 5 pixels of the true location, measured on 90 curated test samples. Mean localisation error was 0.397 px with no noise, 2.305 px with low noise and 4.518 px with high noise. Built with Python, PyTorch and OpenCV.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="work" id="cpw" data-tags="circuits">
+            <h4>CPW resonator design automation</h4>
+            <p class="byline">Independent project</p>
+            <p class="what">A Python tool that turns RF parameters into a coplanar waveguide quarter-wave resonator: it computes characteristic impedance, effective dielectric constant, guided wavelength and resonator length, then generates the 3D geometry for simulation in COMSOL.</p>
+            <details>
+              <summary>What it produces</summary>
+              <div class="more">
+                <p>Parametric CAD for the substrate, ground plane, feed line and resonator is built with CadQuery and exported as STEP, STL, BREP and JSON. PyVista gives a quick 3D preview before the geometry goes into COMSOL Multiphysics for electromagnetic simulation.</p>
+              </div>
+            </details>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ SEMESTER 4 ============ -->
+      <section class="sem" id="sem4" aria-labelledby="sem4-h">
+        <div class="sem-label">
+          <h3 id="sem4-h">Semester 4</h3>
+          <p>Winter 2025–26</p>
+        </div>
+        <div class="works">
+
+          <article class="work" id="diff-amp" data-tags="circuits">
+            <h4>Differential amplifier with current-mirror load, across three nodes</h4>
+            <p class="byline">Electronic Circuits course project, with Atharva Chougule and Sohan Chitluri</p>
+            <p class="what">One amplifier design simulated in Cadence Virtuoso at 180 nm, 90 nm and 45 nm, with DC operating point, AC and transient analysis, to see what technology scaling does to gain, bandwidth, power and output swing.</p>
+            <div class="table-wrap">
+              <table>
+                <caption class="sr">Performance by technology node</caption>
+                <thead><tr><th scope="col">Measure</th><th scope="col">180 nm</th><th scope="col">90 nm</th><th scope="col">45 nm</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Gain</th><td>30 V/V (29.5 dB)</td><td>4.4 V/V (12.9 dB)</td><td>19.5 V/V (25.8 dB)</td></tr>
+                  <tr><th scope="row">Bandwidth</th><td>100 MHz</td><td>2.5 GHz</td><td>1 GHz</td></tr>
+                  <tr><th scope="row">Power</th><td>18 µW</td><td>29 µW</td><td>6.5 µW</td></tr>
+                  <tr><th scope="row">Output swing</th><td>1 V</td><td>45 mV</td><td>270 mV</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <details>
+              <summary>What the comparison shows</summary>
+              <div class="more">
+                <p>The 180 nm node gave the highest gain and swing. The 90 nm node had the widest bandwidth and the lowest gain, which is the usual gain-bandwidth trade-off as output resistance drops. The 45 nm node used the least power. Future work is an op-amp, mismatch analysis, and layout with parasitic extraction.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="work" id="pt-paper" data-tags="physics">
+            <h4>Isospectrality of rationally extended quantum harmonic oscillators under PT-symmetric perturbations</h4>
+            <p class="byline">Research paper with Prof. Velmathi Guruviah and Atharva Chougule. Manuscript under review.</p>
+            <p class="what">Adding an imaginary linear term to a quantum harmonic oscillator makes the Hamiltonian non-Hermitian but PT-symmetric. We tested numerically whether the rational extensions of the oscillator keep their energy levels under that perturbation. They do: the spectrum stays real and identical for every extension order tested.</p>
+            <dl class="figs">
+              <div><dt>Energy levels</dt><dd>(n + ½)ω + γ²/ω²</dd></div>
+              <div><dt>Imaginary parts</dt><dd>≤ 10⁻¹⁴</dd></div>
+              <div><dt>Extension orders</dt><dd>m = 0, 1, 2</dd></div>
+            </dl>
+            <details>
+              <summary>Method and findings</summary>
+              <div class="more">
+                <p>I diagonalised the Hamiltonian in a 60-dimensional truncated Fock basis for perturbation strength γ from 0 to 3, with ω = 2. No exceptional points, level crossings or degeneracies appeared. The energy shift is a uniform γ²/ω² that does not depend on the level n or the extension order m, while the eigenfunctions change substantially as m grows.</p>
+                <p>That lets a designer hold the spectrum fixed and use the extension order as a free parameter to reshape the eigenfunctions. Extending the study to 2D and 3D anisotropic oscillators, and to behaviour near the PT-breaking threshold, is the natural next step.</p>
+              </div>
+            </details>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ SEMESTER 3 ============ -->
+      <section class="sem" id="sem3" aria-labelledby="sem3-h">
+        <div class="sem-label">
+          <h3 id="sem3-h">Semester 3</h3>
+          <p>Autumn 2025</p>
+        </div>
+        <div class="works">
+
+          <article class="work" id="stethoscope" data-tags="ml circuits">
+            <h4>Low-cost digital stethoscope with machine-learning heart-sound classification</h4>
+            <p class="byline">Signal Processing course project, with Atharva Chougule. The paper adds Satyakam Baraha and Saurav Gupta.</p>
+            <p class="what">A stethoscope built end to end: an electret microphone and amplifier circuit capture heart sounds, a Python desktop app records and filters them, and a neural network classifies each recording as normal, murmur or artifact. The paper was presented at IEEE INDISCON 2026 at MNIT Jaipur and is scheduled for IEEE Xplore.</p>
+            <dl class="figs">
+              <div><dt>Overall accuracy</dt><dd>89.42%</dd></div>
+              <div><dt>Abnormal sounds</dt><dd>90.04%</dd></div>
+              <div><dt>Recordings</dt><dd>520</dd></div>
+            </dl>
+            <details>
+              <summary>Hardware, software and how it improved</summary>
+              <div class="more">
+                <p><strong>Hardware.</strong> An electret condenser microphone feeds LM358 and LM386 amplifier modules, followed by RC filters for a 20 to 150 Hz band and a 50 Hz notch, into an ESP32 ADC. Heart sounds are very low frequency, and an ordinary microphone struggles without a proper stethoscope chestpiece.</p>
+                <p><strong>Software.</strong> A Tkinter app shows the live waveform, lets you pick the microphone, records heart or lung sounds for 10 to 60 seconds, adjusts the low-pass cutoff, displays BPM, and saves the raw and filtered audio. BPM comes from band-pass filtering, a Hilbert envelope, adaptive peak detection and RR-interval analysis.</p>
+                <p><strong>Machine learning.</strong> The first model used about 700 labelled samples (normal, extrasystoles, murmurs) with MFCC and spectrogram features and reached about 73% accuracy. Background noise and a small dataset were the main limits. The version in the paper uses a 1D CNN on 120 MFCC-based features per frame (with delta and delta-delta) over 200-frame sequences, after a 50 Hz notch and a sixth-order Butterworth low-pass.</p>
+              </div>
+            </details>
+            <p class="links"><a href="assets/INDISCON-2026-certificate.pdf" target="_blank" rel="noopener">Conference certificate (PDF)</a></p>
+          </article>
+
+          <article class="work" id="parking" data-tags="circuits">
+            <h4>Smart parking system</h4>
+            <p class="byline">Microprocessors and Microcontrollers course project, with Dhyan Patel and Debanjan Roy</p>
+            <p class="what">Ultrasonic sensors on an ESP32 detect whether each parking slot is occupied. The ESP32 acts as its own Wi-Fi access point and hosts a web page: connect to its network, open its IP address in a browser, and a live dashboard shows free slots, distance readings and the time since the last detection.</p>
+            <dl class="figs">
+              <div><dt>Controller</dt><dd>ESP32</dd></div>
+              <div><dt>Sensing</dt><dd>Ultrasonic</dd></div>
+              <div><dt>Interface</dt><dd>On-board web server</dd></div>
+            </dl>
+            <details>
+              <summary>What it covers and what is next</summary>
+              <div class="more">
+                <p>The project combines embedded systems, Wi-Fi networking, sensor integration and a web page generated on the device. The planned next steps are cloud integration and mobile access.</p>
+              </div>
+            </details>
+            <p class="links">
+              <a href="https://www.youtube.com/watch?v=KQEFRiC1z_U" target="_blank" rel="noopener">Watch the demo on YouTube</a>
+              <a href="https://lnkd.in/gZRRBuYq" target="_blank" rel="noopener">Demo on LinkedIn</a>
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ SEMESTER 2 ============ -->
+      <section class="sem" id="sem2" aria-labelledby="sem2-h">
+        <div class="sem-label">
+          <h3 id="sem2-h">Semester 2</h3>
+          <p>Winter 2024–25</p>
+        </div>
+        <div class="works">
+
+          <article class="work" id="lift" data-tags="chip circuits">
+            <h4>Elevator control system</h4>
+            <p class="byline">Digital Systems Design course project</p>
+            <p class="what">An 8-floor elevator controller written in SystemVerilog as a finite state machine. It tracks pending requests with max and min request registers, picks a direction, detects idle, and handles emergency stop and reset. It is my first RTL design.</p>
+            <details>
+              <summary>Verification</summary>
+              <div class="more">
+                <p>The design was simulated on EDA Playground, with waveform analysis and a testbench covering signal-level checks and edge cases. Working on it gave me a grounding in FSM-based RTL architecture and in debugging state transitions at nanosecond resolution.</p>
+              </div>
+            </details>
+            <p class="links">
+              <a href="https://lnkd.in/deDG9DWJ" target="_blank" rel="noopener">Code and testbench</a>
+              <a href="https://lnkd.in/p/dJuQakSb" target="_blank" rel="noopener">LinkedIn post</a>
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ SEMESTER 1 ============ -->
+      <section class="sem" id="sem1" aria-labelledby="sem1-h">
+        <div class="sem-label">
+          <h3 id="sem1-h">Semester 1</h3>
+          <p>Autumn 2024</p>
+        </div>
+        <div class="works">
+
+          <article class="work" id="radar" data-tags="physics circuits">
+            <h4>Radar system for object detection</h4>
+            <p class="byline">Engineering Physics course project, with Dhyan Patel, Atharva Chougule and Pranav Bhujbal</p>
+            <p class="what">My first project at VIT. An Arduino sweeps an ultrasonic sensor back and forth on a servo motor and detects objects around it, an applied take on signal processing and automation.</p>
+            <p class="links"><a href="https://lnkd.in/p/dSxc_x76" target="_blank" rel="noopener">Project post and demo</a></p>
+          </article>
+
+          <article class="work" id="heart-rate" data-tags="circuits ml">
+            <h4>Heart rate monitor</h4>
+            <p class="byline">Introduction to Engineering course project</p>
+            <p class="what">A heart rate monitor built for the Introduction to Engineering course.</p>
+          </article>
+
+        </div>
+      </section>
+    </section>
+
+    <section id="experience" class="block">
+      <div class="block-head">
+        <h2>Experience and research</h2>
+      </div>
+      <dl class="rows">
+        <div>
+          <dt>Ongoing</dt>
+          <dd>
+            <h3>Researcher, GNSS security</h3>
+            <p class="byline">Sarangha</p>
+            <p>Working on detection of spoofing and jamming in satellite navigation signals.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>Feb 2026</dt>
+          <dd>
+            <h3>Quantum computing training</h3>
+            <p class="byline">C-DAC Bengaluru</p>
+            <p>Qubits, gates and circuits on the Qniverse simulation platform, with a visit to C-DAC's Quantum Photonics Laboratory and supercomputing facilities.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>May to Aug 2025</dt>
+          <dd>
+            <h3>Summer intern, VLSI design</h3>
+            <p class="byline">Centre for Nano Electronics and VLSI Design, VIT Chennai</p>
+            <p>Designed conventional, Booth-multiplier, floating-point and pipelined MAC units in Verilog, then ran each through Vivado simulation, synthesis, implementation, and timing and power analysis. The report compares their power and junction temperature.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>May to Jun 2025</dt>
+          <dd>
+            <h3>Digital VLSI system design workshop</h3>
+            <p class="byline">School of Electronics Engineering, VIT Chennai</p>
+            <p>Built and verified multiplexers, decoders, adders, flip-flops, counters and FSM-based sequence detectors in Verilog, each with a simulation testbench.</p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="education" class="block">
+      <div class="block-head">
+        <h2>Education and skills</h2>
+      </div>
+      <div class="edu">
+        <div class="prose">
+          <h3>VIT Chennai</h3>
+          <p>B.Tech, Electronics Engineering (VLSI Design and Technology). Started July 2024, CGPA 8.74.</p>
+          <p>Coursework includes Electronic Materials, Physics of Semiconductor Devices, Semiconductor Device Modelling, Electromagnetic Field Theory, Signal Processing, Electronic Circuits, Digital Systems Design and Quantum Technology for Electronics Engineers.</p>
+          <p class="small">Puna International School, Ahmedabad: Class XII 86% (CBSE, 2024). Podar International School, Ahmedabad: Class X 88% (CBSE, 2022).</p>
+        </div>
+        <dl class="skills">
+          <div><dt>Languages</dt><dd>Python, Verilog HDL, C++, MATLAB, Java</dd></div>
+          <div><dt>Chip design</dt><dd>Cadence Genus, Innovus, Tempus and Virtuoso; Yosys and OpenROAD; Xilinx Vivado</dd></div>
+          <div><dt>Simulation</dt><dd>COMSOL Multiphysics, TCAD, LTspice, CadQuery</dd></div>
+          <div><dt>Machine learning</dt><dd>PyTorch, OpenCV</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact" class="block contact">
+      <h2>Let's talk</h2>
+      <p>I'm open to research and internship opportunities in semiconductor devices and VLSI. Email is the fastest way to reach me.</p>
+      <p class="actions">
+        <a class="btn solid" href="mailto:popattirth@gmail.com">popattirth@gmail.com</a>
+        <a class="btn" href="https://github.com/TirthPopat" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> Tirth Popat</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
